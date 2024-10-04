@@ -1,2 +1,440 @@
-/* ESSENTIALS */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  color: #222222;
+  background: #fafafa;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.response {
+  width: 980px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1120px) {
+  .response {
+    width: 100%;
+  }
+}
+
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.app {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: calc(50px * 1);
+  margin-bottom: calc(50px * 0.6);
+  font-weight: 700;
+}
+h1 span.region {
+  font-style: italic;
+  color: #00dfa2;
+}
+
+header {
+  height: 90px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 70px;
+  position: fixed;
+  z-index: 99;
+}
+header .logo,
+header .menu,
+header .icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+header .logo {
+  width: 90px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo svg {
+  fill: white;
+}
+header.scroll {
+  background: #222222;
+}
+header .menu {
+  width: calc(100% - 270px);
+  height: 100%;
+}
+header .menu ul.parent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+@media all and (max-width: 1024px) {
+  header .menu ul.parent {
+    display: none;
+  }
+}
+header .menu ul.parent li.parent {
+  height: 100%;
+  padding: 0 10px;
+}
+header .menu ul.parent li.parent > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+header .menu ul.parent li.parent > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: white;
+}
+header .icons {
+  width: 180px;
+  height: 100%;
+}
+header .icons .icon {
+  height: 90px;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+header .icons .icon:last-child {
+  margin-right: 0;
+}
+header .icons .icon.empty a {
+  background: none;
+  color: white;
+}
+header .icons .icon a {
+  background: white;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  border-radius: 50px;
+  box-shadow: 0 0 0 2px white;
+}
+header .icons .icon a span {
+  font-size: 30px;
+}
+
+main {
+  width: 100%;
+}
+main section {
+  width: 100%;
+  padding: 70px;
+}
+main section:first-child {
+  padding-top: calc(70px + 90px);
+}
+main section article h2 {
+  font-size: 40px;
+  line-height: calc(40px * 1.5);
+  margin-bottom: calc(40px * 0.6);
+  font-weight: 700;
+}
+main section article .description {
+  margin-bottom: 50px;
+}
+main section article .description p,
+main section article .description ul {
+  font-size: 16px;
+  line-height: calc(16px * 1.5);
+  margin-bottom: calc(16px * 1.5);
+}
+main section article .description p:first-child,
+main section article .description ul:first-child {
+  font-size: 24px;
+  line-height: calc(24px * 1.5);
+  margin-bottom: calc(24px * 1.5);
+  font-weight: 600;
+  font-style: italic;
+}
+main section article .description p:last-child,
+main section article .description ul:last-child {
+  margin-bottom: 0;
+}
+main section article .description ul.list {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 10px 0;
+  gap: 30px;
+}
+@media all and (max-width: 700px) {
+  main section article .description ul.list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+main section article .description ul.list li {
+  padding-left: 35px;
+  display: block;
+  position: relative;
+  font-weight: 700;
+}
+main section article .description ul.list li:before {
+  content: "";
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  font-weight: normal;
+}
+main section article .description ul.list.detailed li {
+  padding-left: 100px;
+}
+main section article .description ul.list.detailed li h4 {
+  font-size: 24px;
+  line-height: calc(24px * 1);
+  margin-bottom: calc(24px * 0.6);
+  font-weight: 700;
+}
+main section article .description ul.list.detailed li p {
+  font-weight: normal;
+}
+main section article .description ul.list.detailed li:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  font-size: 80px;
+}
+main section article .description ul.list.detailed.numbered li {
+  counter-increment: my-awesome-counter;
+}
+main section article .description ul.list.detailed.numbered li:before {
+  content: counter(my-awesome-counter);
+  box-shadow: 0 0 0 4px;
+  font-size: 40px;
+  border-radius: 80px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+main section article .description ul.partners {
+  font-size: 0;
+  text-align: center;
+}
+main section article .description ul.partners li {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+main section article .description ul.partners li:last-child {
+  margin-right: 0;
+}
+main section article .description ul.partners li svg {
+  width: 100%;
+}
+main section article .buttons {
+  text-align: center;
+}
+main section article .buttons button {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  line-height: calc(16px * 1.5);
+  background: #222222;
+  border: 0;
+  border-radius: 40px;
+  color: white;
+  margin-right: 10px;
+}
+main section article .buttons button:last-child {
+  margin-right: 0;
+}
+main section article .buttons button a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px 30px;
+  font-weight: 700;
+}
+main section article .buttons button.empty {
+  background: none;
+  box-shadow: 0 0 0 2px;
+  color: #222222;
+}
+main section.page {
+  padding: 0 !important;
+}
+main section.page .heading {
+  background: #003398;
+  width: 100%;
+  display: table;
+  color: white;
+  padding: 70px 50px;
+  padding-top: 160px;
+  text-align: center;
+}
+main section.page .heading h1 {
+  font-size: 50px;
+  line-height: calc(50px * 1);
+  font-weight: 700;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+main section.page .heading .breadcrumbs span:after {
+  content: " > ";
+  font-weight: bold;
+  opacity: 0.25;
+}
+main section.page .heading .breadcrumbs span:last-child:after {
+  content: "";
+}
+main section.page .inner {
+  padding: 70px;
+}
+main section.hero {
+  height: 100vh;
+  background: #222222;
+  color: white;
+  position: relative;
+}
+main section.hero:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(https://img.freepik.com/photos-gratuite/amis-latins-taille-moyenne-qui-trainent_23-2151139423.jpg?t=st=1727962198~exp=1727965798~hmac=54ec64b615a169dfb2d9c232604f18d5939ffb9f3b73b5d46093cb3c38b4cd3e&w=1060);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+main section.hero:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(34, 34, 34, 0.75);
+  z-index: 1;
+}
+main section.hero .response {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+main section.hero .response .left, main section.hero .response .right {
+  height: 100%;
+  display: table;
+  padding: 20px;
+}
+main section.hero .response .left {
+  text-align: right;
+}
+main section.hero .response .left .description {
+  margin-bottom: 0;
+}
+main section.hero .response .left ul.partners li.partner {
+  width: 60px;
+  height: 60px;
+}
+main section.hero .response .left ul.partners li.partner svg [id*=txt] path, main section.hero .response .left ul.partners li.partner svg [id*=dark] path {
+  fill: white !important;
+}
+main section.hero .response .right .card {
+  overflow: hidden;
+  width: 300px;
+  border-radius: 18px;
+}
+main section.hero .response .right .card .head {
+  background: #003398;
+  width: 100%;
+  height: 150px;
+  border-radius: 18px 18px 0 0;
+}
+main section.hero .response .right .card .form {
+  background: white;
+  width: 100%;
+  height: 300px;
+  border-radius: 0 0 18px 18px;
+}
+@media all and (max-width: 900px) {
+  main section.hero {
+    height: initial;
+  }
+  main section.hero .response {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  main section.hero .response .left, main section.hero .response .right {
+    text-align: center;
+  }
+  main section.hero .response .right .card {
+    margin: 0 auto;
+  }
+}
+main section.hero article .buttons button {
+  background: white;
+  color: #222222;
+}
+main section.hero article .buttons button.empty {
+  background: none;
+  box-shadow: 0 0 0 2px;
+  color: white;
+}
+
+footer {
+  background: #222222;
+  padding: 70px;
+}

@@ -1,0 +1,314 @@
+// MAIN
+main {
+    width: 100%;
+  
+    section {
+      width: 100%;
+      padding: $big-pad;
+      &:first-child {
+        padding-top: calc(#{$big-pad} + 90px);
+      }
+  
+      article {
+        
+        h2 {
+          font-size: $fat-font-size;
+          line-height: calc(#{$fat-font-size} * 1.5);
+          margin-bottom: calc(#{$fat-font-size} * 0.6);
+          font-weight: 700;
+        }
+        .description {
+          margin-bottom: $medium-pad;
+          p,
+          ul {
+            font-size: $base-font-size;
+            line-height: calc(#{$base-font-size} * 1.5);
+            margin-bottom: calc(#{$base-font-size} * 1.5);
+            &:first-child {
+              font-size: $medium-font-size;
+              line-height: calc(#{$medium-font-size} * 1.5);
+              margin-bottom: calc(#{$medium-font-size} * 1.5);
+              font-weight: 600;
+              font-style: italic;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          ul {
+            &.list {
+              display: grid;
+              grid-auto-flow: row;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(3, 1fr);
+              padding: 10px 0;
+              gap: 30px;
+              @media all and (max-width: 700px) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+              }
+              li {
+                padding-left: 35px;
+                display: block;
+                position: relative;
+                font-weight: 700;
+  
+                &:before {
+                  content: "\e031";
+  
+                  font-family: "Material Symbols Outlined", sans-serif;
+                  font-size: 30px;
+                  width: 30px;
+                  height: 30px;
+                  position: absolute;
+                  left: 0;
+                  top: 0px;
+                  font-weight: normal;
+                }
+              }
+              &.detailed {
+                li {
+                  padding-left: 100px;
+                  h4 {
+                    font-size: $medium-font-size;
+                    line-height: calc(#{$medium-font-size} * 1);
+                    margin-bottom: calc(#{$medium-font-size} * 0.6);
+                    font-weight: 700;
+                  }
+                  p {
+                    font-weight: normal;
+                  }
+                  &:before {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    height: 80px;
+                    font-size: 80px;
+                  }
+                }
+                &.numbered {
+                  li {
+                    counter-increment: my-awesome-counter;
+                    &:before {
+                      content: counter(my-awesome-counter);
+                      box-shadow: 0 0 0 4px;
+                      font-size: 40px;
+                      border-radius: 80px;
+                      font-family: $base-font;
+                      font-weight: 700;
+                    }
+                  }
+                }
+              }
+            }
+            &.partners {
+              font-size: 0;
+              text-align: center;
+              li {
+                width: 120px;
+                height: 120px;
+                margin-right: 10px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+  
+                &:last-child {
+                  margin-right: 0;
+                }
+                svg {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+        .buttons {
+          text-align: center;
+          button {
+            font-family: $base-font;
+            font-size: $base-font-size;
+            line-height: calc(#{$base-font-size} * 1.5);
+            background: $dark-color;
+            border: 0;
+            border-radius: 40px;
+            color: white;
+            margin-right: $small-pad;
+            &:last-child {
+              margin-right: 0;
+            }
+  
+            a {
+              text-decoration: none;
+              color: inherit;
+              display: block;
+              width: 100%;
+              height: 100%;
+              padding: 15px 30px;
+  
+              font-weight: 700;
+            }
+            &.empty {
+              background: none;
+              box-shadow: 0 0 0 2px;
+              color: $dark-color;
+            }
+          }
+        }
+      }
+      &.page {
+        padding: 0 !important;
+        .heading {
+          background: $color-1;
+  
+          width: 100%;
+          display: table;
+          color: white;
+          padding:$big-pad $giant-font-size;
+          padding-top:160px;
+          text-align:center;
+          h1 {
+            font-size:$giant-font-size;
+            line-height: calc(#{$giant-font-size} * 1);
+            font-weight: 700;
+            text-align:center;
+            width:80%;
+            margin:0 auto;
+            margin-bottom:20px;
+          }
+          .breadcrumbs{
+            span{
+              
+              &:after{
+                content:' > ';
+                font-weight:bold;
+                opacity:0.25;
+              }
+              &:last-child{
+                &:after{
+                  content:'';
+                }
+              }
+            }
+          }
+        }
+        .inner {
+          padding: $big-pad;
+        }
+  
+        
+      }
+      &.hero{
+        height:100vh;
+        background:$dark-color;
+        color:white;
+        position:relative;
+        
+        
+        
+        &:before{
+          content:'';
+          width:100%;
+          height:100%;
+          position:absolute;
+          top:0;
+          left:0;
+          background: url(https://img.freepik.com/photos-gratuite/amis-latins-taille-moyenne-qui-trainent_23-2151139423.jpg?t=st=1727962198~exp=1727965798~hmac=54ec64b615a169dfb2d9c232604f18d5939ffb9f3b73b5d46093cb3c38b4cd3e&w=1060);
+          background-size: cover;
+          background-position:center;
+          z-index:1;
+        }
+        &:after{
+          content:'';
+          width:100%;
+          height:100%;
+          position:absolute;
+          top:0;
+          left:0;
+          background:rgba($dark-color, 0.75);
+          z-index:1;
+        }
+        
+        .response{
+          display: grid;
+          grid-auto-flow: row;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(1, 1fr);
+          height: 100%;
+          position:relative;
+          z-index:2;
+          .left, .right{
+            height: 100%;
+            display:table;
+            padding:20px;
+          }
+          .left{
+            text-align:right;
+            .description{
+              margin-bottom:0;
+            }
+            ul.partners{
+              li.partner{
+                width:60px;
+                height:60px;
+                svg{
+                  [id*="txt"] path, [id*="dark"] path{
+                    fill:white !important;
+                  }
+                }
+              }
+            }
+          }
+          .right{
+            .card{
+              overflow:hidden;
+              width:300px;
+              
+              border-radius:18px;
+              .head{
+                background:$color-1;
+                width:100%;
+                height:150px;
+                border-radius: 18px 18px 0 0;
+              }
+              .form{
+                background:white;
+                width:100%;
+                height:300px;
+                border-radius: 0 0 18px 18px ;
+              }
+            }
+          }
+        }
+        @media all and (max-width: 900px) {
+          height:initial;
+          .response {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            .left, .right{
+              text-align:center;
+            }
+            .right{
+              .card{
+                margin:0 auto;
+              }
+            }
+          }
+        }
+        article{
+          .buttons{
+            button{
+              background:white;
+              color:$dark-color;
+              
+              &.empty {
+                background: none;
+                box-shadow: 0 0 0 2px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

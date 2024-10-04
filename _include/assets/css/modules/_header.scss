@@ -1,0 +1,102 @@
+// HEADER
+
+header {
+    height: 90px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0 70px;
+    position: fixed;
+    z-index: 99;
+    .logo,
+    .menu,
+    .icons {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .logo {
+      width: 90px;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+  
+      svg {
+        fill: white;
+      }
+    }
+    &.scroll {
+      background: $dark-color;
+    }
+    .menu {
+      width: calc(100% - 270px);
+      height: 100%;
+      ul.parent {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        @media all and (max-width: 1024px) {
+          display:none;
+        }
+        li.parent {
+          height: 100%;
+  
+          padding: 0 10px;
+          & > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              text-decoration: underline;
+              text-underline-offset: 10px;
+              text-decoration-thickness: 1px;
+              text-decoration-color: white;
+            }
+          }
+        }
+      }
+    }
+    .icons {
+      width: 180px;
+      height: 100%;
+      .icon {
+        height: 90px;
+        margin-right: 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.empty {
+          a {
+            background: none;
+            color: white;
+          }
+        }
+        a {
+          background: white;
+          width: 50px;
+          height: 50px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: $dark-color;
+          border-radius: 50px;
+          box-shadow: 0 0 0 2px white;
+          span {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
