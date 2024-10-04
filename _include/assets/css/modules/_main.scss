@@ -54,8 +54,7 @@ main {
                 font-weight: 700;
   
                 &:before {
-                  content: "\e031";
-  
+                  content:'\e031';
                   font-family: "Material Symbols Outlined", sans-serif;
                   font-size: 30px;
                   width: 30px;
@@ -213,7 +212,7 @@ main {
           position:absolute;
           top:0;
           left:0;
-          background: url(https://img.freepik.com/photos-gratuite/amis-latins-taille-moyenne-qui-trainent_23-2151139423.jpg?t=st=1727962198~exp=1727965798~hmac=54ec64b615a169dfb2d9c232604f18d5939ffb9f3b73b5d46093cb3c38b4cd3e&w=1060);
+          background: url(../images/friends.jpg);
           background-size: cover;
           background-position:center;
           z-index:1;

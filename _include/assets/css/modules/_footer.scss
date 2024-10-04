@@ -1,0 +1,37 @@
+footer{
+    color:white;
+    .menu{
+        margin-bottom:50px;
+        ul.parent{
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap:20px;
+            li.parent{
+                
+                & > a{
+                    margin-bottom:10px;
+                    display:block;
+                    font-weight: 700;
+                }
+                ul.child{
+                    
+                    li.child{
+                        
+                        & > a{
+                            margin-bottom:5px;
+                            display:block;
+                            font-size:14px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .credits{
+        text-align:center;
+        font-size:14px;
+    }
+}
