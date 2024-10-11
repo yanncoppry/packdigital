@@ -3,298 +3,33 @@ extends _include/structure/_layout.pug
 block content
   main
       main
-        section.hero
-          .response
-            .left
-              .vertical
-                article
+        section.page
+          .heading
+            .vertical
+              h1 Vivamus pharetra vestibulum nulla
+              .breadcrumbs
+                span 
+                  a(href='#') Accueil
+                span 
+                  a(href='#') Actualités
+                span.current 
+                  a(href='#') Région Guadeloupe
+          .inner
+            .response
+              article
 
-                  h1 
-                    span Entreprises de la Région 
-                    span.region Guadeloupe 
-                    span : Votre Pack Digital est à 0€ !
+                h2 Lorem ipsum dolor
 
-                  .description
-                    ul.partners
-                  
-                      li.partner
-                        +svg_region-guadeloupe
+                .description
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non euismod diam. Vivamus pharetra vestibulum nulla. Aenean consectetur tincidunt felis, a faucibus diam tempor sit amet. Etiam ultrices felis vitae rhoncus volutpat. Ut eu nulla non magna pulvinar luctus. 
 
-                      li.partner
-                        +svg_feder
-
-                      li.partner
-                        +svg_union-europenne
-
-                      li.partner
-                        +svg_fonds-europeens
-
-                      li.partner
-                        +svg_francenum
-
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non euismod diam. Vivamus pharetra vestibulum nulla.
-                  
-            .right   
-              .vertical
-                .card
-                  .head
-                  .form
-                    form#myForm
-                      fieldset#fieldset1
-                        h3 Votre Pack
-                        .form-group
-                          label(for="siret") Composez votre Pack digital :
-                          .formControls
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit0")
-                                input#type_produit0.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Site internet Vitrine"
-                                )
-                                | Site internet Vitrine
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit1")
-                                input#type_produit1.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Site internet E-Commerce"
-                                )
-                                | Site internet E-Commerce
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit3")
-                                input#type_produit3.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Devis et Facturation"
-                                )
-                                | Devis et Facturation
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit2")
-                                input#type_produit2.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Site Internet E-Réservation"
-                                )
-                                | Système de Réservation en ligne
-                            
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit4")
-                                input#type_produit4.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Système de paiement en ligne"
-                                )
-                                | Système de Paiement en ligne
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit5")
-                                input#type_produit5.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Sauvegardes Cloud automatisées"
-                                )
-                                | Sauvegardes Cloud automatisées
-                        .form-group
-                          .pricing
-                            table
-                              tbody
-                                tr.total
-                                  td Votre Pack Digital coûte :
-                                  td.price 12.500€
-                                tr.aide
-                                  td Aide Conseil Régional (80%) :
-                                  td.price - 10.000€
-                                tr.aide
-                                  td OFFRE Pack RAC (20%) :
-                                  td.price - 2.500€
-                                tr.rac
-                                  td Reste à payer :
-                                  td.price 0€
-
-                          .formControls 
-
-                        .form-group
-                          .formControls
-                            button.btn.btn-primary(
-                              type="submit",
-                              value="Continuer",
-                              disabled
-                            ) Continuer
-                      fieldset#fieldset2.hidden
-                        h3 Vos informations de contact
-                        .form-group
-                          label(for="siret") SIRET
-                          .formControls
-                            input#siret.form-control(
-                              name="siret",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group.hidden
-                          label(for="company-name") Raison sociale
-                          .formControls
-                            input#company-name.form-control(
-                              name="company-name",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-address") Adresse
-                          .formControls
-                            input#company-address.form-control(
-                              name="company-address",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-zip") Code postal
-                          .formControls
-                            input#company-zip.form-control(
-                              name="company-zip",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-city") Ville
-                          .formControls
-                            input#company-city.form-control(
-                              name="company-city",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-ceo") Dirigeant
-                          .formControls
-                            input#company-ceo.form-control(
-                              name="company-ceo",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-naf") Code NAF
-                          .formControls
-                            input#company-naf.form-control(
-                              name="company-naf",
-                              type="text",
-                              placeholder="",
-                              readonly=""
-                            ) 
-                        .form-group
-                          label(for="name") Nom complet
-                          .formControls
-                            input.form-control(
-                              name="name",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group
-                          label(for="email") Email
-                          .formControls
-                            input.form-control(
-                              name="email",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group
-                          label(for="phone") Téléphone
-                          .formControls
-                            input.form-control(
-                              name="phone",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group
-                          .formControls
-                            button.btn.btn-primary(
-                              type="submit",
-                              value="Continuer",
-                              disabled
-                            ) Continuer
-                      fieldset#fieldset3.hidden
-                        h3 Votre dossier d'Aide Digitale
-
-                        .form-group
-                          label(for="kbis") Extrait KBIS de votre Société
-                          .formControls
-                            input#kbis.form-control(
-                              name="kbis",
-                              type="file",
-                              placeholder=""
-                            )
-                        .form-group
-                          label(for="id-recto") Pièce d'identité du Dirigeant (Recto)
-                          .formControls
-                            input#id-recto.form-control(
-                              name="id-recto",
-                              type="file",
-                              placeholder=""
-                            ) 
-                        .form-group
-                          label(for="id-verso") Pièce d'identité du Dirigeant (Verso)
-                          .formControls
-                            input#id-verso.form-control(
-                              name="id-verso",
-                              type="file",
-                              placeholder=""
-                            ) 
-                        .form-group
-                          label.formControlLabel(data-toggle="tooltip", title="")
-
-                          .formControls
-                            .form-check.form-check-inline
-                              label.form-check-label.toggle-switch(for="cgv0")
-                                input#cgv0.toggle-switch__input.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[cgv][]"
-                                ) 
-                                | J'accepte les conditions générales d'utilisation.
-                        .form-group
-                          label.formControlLabel(data-toggle="tooltip", title="")
-
-                          .formControls
-                            .form-check.form-check-inline
-                              label.form-check-label.toggle-switch(for="cgv1")
-                                input#cgv1.toggle-switch__input.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[cgv][]"
-                                ) 
-                                | J'autorise et mandate la plateforme à effectuer les démarches relatives à la demande de subventions pour la transition digitale de ma société.
-                        .form-group
-                          label.formControlLabel(data-toggle="tooltip", title="")
-
-                          .formControls
-                            .form-check.form-check-inline
-                              label.form-check-label.toggle-switch(for="cgv2")
-                                input#cgv2.toggle-switch__input.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[cgv][]"
-                                ) 
-                                |
-                                | J'atteste sur l'honneur que ma société n'a pas fait l'objet d'octroi de subventions supérieures à 200.000€ durant ces 3 dernières années.
-                        .form-group
-                          label(for="signature") Signature du dirigeant
-                          .formControls
-                            canvas#signature(
-                              width="200px",
-                              height="200",
-                              style="border: 1px solid #000"
-                            )
-                            |
-                            button#clear-signature(type="button") Effacer la signature
-
-                        .form-group
-                          .formControls
-                            button.btn.btn-primary(
-                              type="submit",
-                              value="Finaliser",
-                              disabled
-                            ) Finaliser
-
+                  p Mauris posuere faucibus rutrum. Cras sodales imperdiet neque non porttitor. Vivamus eget fermentum libero, nec vehicula mi. Donec aliquet lobortis massa in vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec nec lectus eu sem rutrum varius. Integer mollis ante ligula, eget congue augue convallis eget. Quisque at lectus metus. Vestibulum at orci velit. Quisque ullamcorper non neque quis sagittis. Curabitur vitae tellus ullamcorper, rhoncus nibh ac, tincidunt metus. Aenean malesuada commodo ante sit amet vestibulum. Pellentesque at urna lectus. Vivamus dignissim turpis suscipit luctus auctor. Nulla sit amet urna laoreet, posuere est eget, semper est.  
+                .buttons
+                
+                  button
+                    a(href='#') Lorem ipsum
+                  button.empty
+                    a(href='#') Lorem ipsum              
         section
           .response
             article
