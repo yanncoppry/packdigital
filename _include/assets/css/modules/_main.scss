@@ -9,7 +9,7 @@ main {
         padding-top: calc(#{$big-pad} + 90px);
       }
       @media all and (max-width: 700px) {
-        padding: $base-pad;
+        padding: $big-pad $base-pad;
         &:first-child {
           padding-top: calc(#{$base-pad} + 90px);
         }
@@ -19,7 +19,7 @@ main {
         
         h2 {
           font-size: $fat-font-size;
-          line-height: calc(#{$fat-font-size} * 1.5);
+          line-height: calc(#{$fat-font-size} * 1.25);
           margin-bottom: calc(#{$fat-font-size} * 0.6);
           font-weight: 700;
         }
@@ -328,6 +328,24 @@ main {
               background:white;
               color:$dark-color;
               
+              &.empty {
+                background: none;
+                box-shadow: 0 0 0 2px;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      &.dark{
+        background:$dark-color;
+        color:white;
+        article{
+          .buttons{
+            button{
+              background:white;
+              color:$dark-color;
+              a{}
               &.empty {
                 background: none;
                 box-shadow: 0 0 0 2px;
