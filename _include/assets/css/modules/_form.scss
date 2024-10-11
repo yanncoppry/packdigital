@@ -8,7 +8,7 @@ form {
       font-size: $base-font-size;
       line-height: $base-font-size;
       margin-bottom: calc(#{$base-font-size} * 1.5);
-      text-align: left;
+      text-align: center;
     }
     .form-group {
 
@@ -456,13 +456,16 @@ form {
         }
       }
       button {
-        background: $dark-color;
+        background: $color-1;
         font-family: $base-font;
         color: $light-color;
-        padding: 5px 15px;
+        padding: 10px 25px;
         border-radius: 30px;
         border: 0;
+        font-size: 19px;
+        font-weight: 700;
         &:disabled {
+          
           opacity: 0.2;
         }
         &#clear-signature{

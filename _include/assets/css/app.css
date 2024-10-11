@@ -54,6 +54,12 @@ h1 {
   margin-bottom: calc(45px * 0.6);
   font-weight: 700;
 }
+@media all and (max-width: 500px) {
+  h1 {
+    font-size: 32px;
+    line-height: calc(32px * 1);
+  }
+}
 h1 span.region {
   font-style: italic;
   color: #00dfa2;
@@ -74,6 +80,11 @@ header {
   position: fixed;
   z-index: 99;
 }
+@media all and (max-width: 500px) {
+  header {
+    padding: 0 30px;
+  }
+}
 header .logo,
 header .menu,
 header .icons {
@@ -91,6 +102,7 @@ header .logo {
 }
 header .logo svg {
   fill: white;
+  width: 100% !important;
 }
 header.scroll {
   background: #222222;
@@ -350,7 +362,7 @@ main section.page .inner {
   padding: 70px;
 }
 main section.hero {
-  height: 100vh;
+  min-height: 100vh;
   background: #222222;
   color: white;
   position: relative;
@@ -401,6 +413,12 @@ main section.hero .response .left ul.partners li.partner {
   width: 60px;
   height: 60px;
 }
+@media all and (max-width: 500px) {
+  main section.hero .response .left ul.partners li.partner {
+    width: 50px;
+    height: 50px;
+  }
+}
 main section.hero .response .left ul.partners li.partner svg [id*=txt] *, main section.hero .response .left ul.partners li.partner svg [id*=dark] * {
   fill: white !important;
 }
@@ -418,6 +436,17 @@ main section.hero .response .right .card .head {
   width: 100%;
   height: 100px;
   border-radius: 18px 18px 0 0;
+  display: table;
+  padding: 30px;
+  text-align: center;
+}
+main section.hero .response .right .card .head h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+main section.hero .response .right .card .head p {
+  font-size: 12px;
+  line-height: 12px;
 }
 main section.hero .response .right .card .form {
   background: white;
@@ -514,7 +543,7 @@ form h3 {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: calc(16px * 1.5);
-  text-align: left;
+  text-align: center;
 }
 form .form-group {
   margin-bottom: 20px;
@@ -866,12 +895,14 @@ form .form-group .valid-feedback:before {
   content: "";
 }
 form .form-group button {
-  background: #222222;
+  background: #003398;
   font-family: "Space Grotesk", sans-serif;
   color: #fafafa;
-  padding: 5px 15px;
+  padding: 10px 25px;
   border-radius: 30px;
   border: 0;
+  font-size: 19px;
+  font-weight: 700;
 }
 form .form-group button:disabled {
   opacity: 0.2;

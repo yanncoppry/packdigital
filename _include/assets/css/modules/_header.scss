@@ -10,6 +10,9 @@ header {
     padding: 0 70px;
     position: fixed;
     z-index: 99;
+    @media all and (max-width: 500px) {
+      padding: 0 30px;
+    }
     .logo,
     .menu,
     .icons {
@@ -27,6 +30,7 @@ header {
   
       svg {
         fill: white;
+        width: 100% !important;
       }
     }
     &.scroll {
