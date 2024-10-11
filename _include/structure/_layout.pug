@@ -1,28 +1,28 @@
 doctype html
 html(lang="en")
 
-head
-  meta(charset="utf-8")
-  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+  head
+    meta(charset="utf-8")
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
 
 
-  title Obligation Thermostat 2024
-  link(rel="stylesheet" href="_include/assets/css/app.css")
-  script#search-js(defer src='https://api.mapbox.com/search-js/v1.0.0-beta.22/web.js')
+    title Obligation Thermostat 2024
+    link(rel="stylesheet" href="_include/assets/css/app.css")
+    script#search-js(defer src='https://api.mapbox.com/search-js/v1.0.0-beta.22/web.js')
 
 
 
-body
-  .app
-      include _mixins.pug
-      include _header.pug
+  body
+    .app
+        include _mixins.pug
+        include _header.pug
 
-      block content
+        block content
 
-      include _footer.pug
+        include _footer.pug
 
-      script(src='_include/assets/js/library/jquery.js')
-      script(src='//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js')
-      script(src='_include/assets/js/app.js')
-      script(src='_include/assets/js/mapbox.js')
-      script(src='_include/assets/js/form.js')
+        script(src='_include/assets/js/library/jquery.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js')
+        script(src='_include/assets/js/app.js')
+        script(src='_include/assets/js/mapbox.js')
+        script(src='_include/assets/js/form.js')
