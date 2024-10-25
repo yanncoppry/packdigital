@@ -31,4 +31,11 @@ jQuery(".btn-success").click(function() {
   });
 
 
+  $('.flexslider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: true,
+    slideshow: true
+
+  });
 

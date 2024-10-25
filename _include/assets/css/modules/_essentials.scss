@@ -46,7 +46,7 @@
     list-style-type: none;
   }
   
-  h1{
+  h1, h5{
     font-size:$giant-font-size;
     line-height: calc(#{$giant-font-size} * 1);
     margin-bottom: calc(#{$giant-font-size} * 0.6);

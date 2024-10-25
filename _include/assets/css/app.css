@@ -48,19 +48,19 @@ ul {
   list-style-type: none;
 }
 
-h1 {
+h1, h5 {
   font-size: 45px;
   line-height: calc(45px * 1);
   margin-bottom: calc(45px * 0.6);
   font-weight: 700;
 }
 @media all and (max-width: 500px) {
-  h1 {
+  h1, h5 {
     font-size: 32px;
     line-height: calc(32px * 1);
   }
 }
-h1 span.region {
+h1 span.region, h5 span.region {
   font-style: italic;
   color: #00dfa2;
 }
@@ -250,6 +250,16 @@ main section article .description ul.list li:before {
   top: 0px;
   font-weight: normal;
 }
+main section article .description ul.list.detailed {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media all and (max-width: 700px) {
+  main section article .description ul.list.detailed {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
 main section article .description ul.list.detailed li {
   padding-left: 100px;
 }
@@ -298,6 +308,13 @@ main section article .description ul.partners li:last-child {
 }
 main section article .description ul.partners li svg {
   width: 100%;
+}
+main section article .description ul.technos {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px 0;
+  gap: 30px;
 }
 main section article .buttons {
   text-align: center;
@@ -479,6 +496,31 @@ main section.hero article .buttons button.empty {
   background: none;
   box-shadow: 0 0 0 2px;
   color: white;
+}
+main section.hero.little {
+  height: initial;
+  min-height: initial;
+  text-align: center;
+}
+main section.hero.little .response {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+main section.hero.little .response .description {
+  margin-bottom: 0;
+}
+main section.hero.little .response .flex-direction-nav {
+  display: none;
+}
+main section.hero.little .response .comment {
+  font-size: 24px;
+  line-height: 26px;
+  font-style: italic;
+}
+main section.hero.little .response .comment .txt {
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 main section.dark {
   background: #222222;
