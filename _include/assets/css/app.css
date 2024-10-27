@@ -201,6 +201,13 @@ main section article h2 {
 main section article .description {
   margin-bottom: 50px;
 }
+main section article .description .big-visual {
+  float: left;
+  width: 50%;
+}
+main section article .description .big-visual img {
+  width: 100%;
+}
 main section article .description p,
 main section article .description ul {
   font-size: 16px;
@@ -308,6 +315,31 @@ main section article .description ul.partners li:last-child {
 }
 main section article .description ul.partners li svg {
   width: 100%;
+}
+main section article .description ul.partners.detailed {
+  font-size: 13px !important;
+}
+main section article .description ul.partners.detailed li {
+  width: 450px;
+}
+main section article .description ul.partners.detailed li .txt {
+  padding-left: 20px;
+}
+@media all and (max-width: 500px) {
+  main section article .description ul.partners.detailed li {
+    width: 100%;
+  }
+}
+main section article .description ul.partners.detailed li h4 {
+  text-align: left;
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+main section article .description ul.partners.detailed li p {
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
 }
 main section article .description ul.technos {
   display: grid;
@@ -534,6 +566,9 @@ main section.dark article .buttons button.empty {
   background: none;
   box-shadow: 0 0 0 2px;
   color: white;
+}
+main section.blue {
+  background: #00dfa2;
 }
 
 footer {
