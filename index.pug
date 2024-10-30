@@ -32,7 +32,6 @@ block content
                       li.partner
                         +svg_francenum
 
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non euismod diam. Vivamus pharetra vestibulum nulla.
                   
             .right   
               .vertical
@@ -42,263 +41,325 @@ block content
                       h3 Votre demande ici
                       p Votre Pack Digital 100% financé par la Transition Numérique
                   .form
-                    form#myForm
-                      fieldset#fieldset1
-                        h3 Votre Pack
-                        .form-group
-                          label(for="siret") Composez votre Pack digital :
-                          .formControls
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit0")
-                                input#type_produit0.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Site internet Vitrine"
-                                )
-                                | Site internet Vitrine
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit1")
-                                input#type_produit1.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Site internet E-Commerce"
-                                )
-                                | Site internet E-Commerce
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit3")
-                                input#type_produit3.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Devis et Facturation"
-                                )
-                                | Devis et Facturation
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit2")
-                                input#type_produit2.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Site Internet E-Réservation"
-                                )
-                                | Système de Réservation en ligne
-                            
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit4")
-                                input#type_produit4.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Système de paiement en ligne"
-                                )
-                                | Système de Paiement en ligne
-                            .form-check.form-check-inline.iconify
-                              label.form-check-label(for="type_produit5")
-                                input#type_produit5.iconed.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[type_produit][]",
-                                  value="Sauvegardes Cloud automatisées"
-                                )
-                                | Sauvegardes Cloud automatisées
-                        .form-group
-                          .pricing
-                            table
-                              tbody
-                                tr.total
-                                  td Votre Pack Digital coûte :
-                                  td.price 12.500€
-                                tr.aide
-                                  td Aide Conseil Régional (80%) :
-                                  td.price - 10.000€
-                                tr.aide
-                                  td OFFRE Pack RAC (20%) :
-                                  td.price - 2.500€
-                                tr.rac
-                                  td Reste à payer :
-                                  td.price 0€
+                    form#userForm(method='post', enctype='multipart/form-data', action='http://localhost:8084/')
+                      #rsform_progress_3.rsformProgress
+                      #rsform_error_3(style='display: none;')
+                        p.formRed(style='font-size:9px;') Veullez remplir tous les champs du formulaire.
+                      // Do not remove this ID, it is used to identify the page so that the pagination script can work correctly
+                      fieldset#rsform_3_page_0.formContainer.formHidden
+                        .form-row
+                          .col-md-12
+                            .form-group.rsform-block.rsform-block-pack-title
+                              h3 Votre Pack Digital
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-packdigital
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='') Composez votre Pack Digital :
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                div(aria-required='true')
+                                  .form-check.form-check-inline.iconify
+                                    input#packdigital0.iconed.rsform-checkbox.form-check-input(type='checkbox', checked='checked', name='form[packdigital][]', value='Site Internet Vitrine')
+                                    |  
+                                    label.form-check-label.checked(for='packdigital0') Site Internet Vitrine
+                                  |  
+                                  .form-check.form-check-inline.iconify
+                                    input#packdigital1.iconed.rsform-checkbox.form-check-input(type='checkbox', name='form[packdigital][]', value='Site Internet E-Commerce')
+                                    |  
+                                    label.form-check-label(for='packdigital1') Site Internet E-Commerce
+                                  |  
+                                  .form-check.form-check-inline.iconify
+                                    input#packdigital2.iconed.rsform-checkbox.form-check-input(type='checkbox', checked='checked', name='form[packdigital][]', value='CRM Devis/Facturation')
+                                    |  
+                                    label.form-check-label.checked(for='packdigital2') CRM Devis/Facturation
+                                  |  
+                                  .form-check.form-check-inline.iconify
+                                    input#packdigital3.iconed.rsform-checkbox.form-check-input(type='checkbox', name='form[packdigital][]', value='Système de Paiement à distance')
+                                    |  
+                                    label.form-check-label(for='packdigital3') Syst&egrave;me de Paiement &agrave; distance
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component23.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.rsform-block.rsform-block-pricing
+                              .pricing
+                                table
+                                  tbody
+                                    tr.total
+                                      td Votre Pack Digital co&ucirc;te :
+                                      td.price
+                                        .total_cost_txt 8,000.00 &euro;
+                                    tr.aide
+                                      td Aide Conseil R&eacute;gional (80%) :
+                                      td.price
+                                        .subvention_txt 6,400.00 &euro;
+                                    tr.aide
+                                      td OFFRE Pack RAC (20%) :
+                                      td.price
+                                        .rac_offer_txt 1,600.00 &euro;
+                                    tr.rac
+                                      td Reste &agrave; payer :
+                                      td.price
+                                        .total_pay_txt 0.00 &euro;
+                        | &#x9;
+                        .form-row
+                          .col-md-12
+                            .form-group.row.rsform-block.rsform-block-pb1
+                              .col-sm-3.control-label.formControlLabel
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls.btn-group
+                                button#pb1Next.rsform-button.btn.btn-success(type='button', onclick='rsfp_changePage(3, 1, 3, 1, {"parent":"","field":"is-invalid"})') Continuer
+                      // Do not remove this ID, it is used to identify the page so that the pagination script can work correctly
+                      fieldset#rsform_3_page_1.formContainer.formHidden
+                        .form-row
+                          .col-md-12
+                            .form-group.rsform-block.rsform-block-contact-title
+                              h3 Vos informations de contact
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-siret
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='siret') Quel est le num&eacute;ro de SIRET ?
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#siret.rsform-input-box.form-control(type='text', value='', size='20', placeholder='0393939393', name='form[siret]', aria-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component34.formNoError Invalide
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-company-name
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='company-name') Quelle est la raison sociale de votre soci&eacute;t&eacute; ?
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#company-name.rsform-input-box.form-control(type='text', value='', size='20', placeholder='Quelle est la raison sociale de votre société ?', name='form[company-name]', aria-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component36.formNoError Le Siret est invalide
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-company-address.hidden
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='company-address') Quelle est l&apos;adresse de votre soci&eacute;t&eacute; ?
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#company-address.hidden.rsform-input-box.form-control(type='text', value='', size='20', name='form[company-address]')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component37.formNoError Invalid Input
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-company-zip.hidden
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='company-zip') Code postal
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#company-zip.hidden.rsform-input-box.form-control(type='text', value='', size='20', name='form[company-zip]')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component38.formNoError Invalid Input
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-company-city.hidden
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='company-city') Ville/Commune
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#company-city.hidden.rsform-input-box.form-control(type='text', value='', size='20', name='form[company-city]')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component39.formNoError Invalid Input
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-company-ceo.hidden
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='company-ceo') Dirigeant
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#company-ceo.hidden.rsform-input-box.form-control(type='text', value='', size='20', name='form[company-ceo]')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component40.formNoError Invalid Input
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-company-naf.hidden
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='company-naf') Code NAF
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#company-naf.hidden.rsform-input-box.form-control(type='text', value='', size='20', name='form[company-naf]')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component41.formNoError Invalid Input
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-name
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='name') Quel est votre nom complet ?
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#name.rsform-input-box.form-control(type='text', value='', size='20', placeholder='Quel est votre nom complet ?', name='form[name]', aria-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component42.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-email
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='email') Quel est votre adresse email ?
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#email.rsform-input-box.form-control(type='text', value='', size='20', placeholder='Quel est votre adresse email ?', name='form[email]', aria-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component43.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-phone
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='phone') Quel est votre num&eacute;ro de t&eacute;l&eacute;phone ?
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#phone.rsform-input-box.form-control(type='text', value='', size='20', placeholder='Quel est votre numéro de téléphone ?', name='form[phone]', aria-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component44.formNoError Obligatoire
+                        | &#x9;
+                        .form-row
+                          .col-md-12
+                            .form-group.row.rsform-block.rsform-block-pb2
+                              .col-sm-3.control-label.formControlLabel
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls.btn-group
+                                button#pb2Prev.rsform-button.btn.btn-warning(type='button', onclick='rsfp_changePage(3, 0, 3)') Retour
+                                button#pb2Next.rsform-button.btn.btn-success(type='button', onclick='rsfp_changePage(3, 2, 3, 1, {"parent":"","field":"is-invalid"})') Continuer
+                      // Do not remove this ID, it is used to identify the page so that the pagination script can work correctly
+                      fieldset#rsform_3_page_2.formContainer
+                        .form-row
+                          .col-md-12
+                            .form-group.rsform-block.rsform-block-aidfile-title
+                              h3 Votre Dossier d&apos;Aide Num&eacute;rique
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-kbis
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='kbis') Extrait KBIS de votre Soci&eacute;t&eacute;
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#kbis.rsform-upload-box.form-control-file(type='file', name='form[kbis]', aria-required='true', data-rsfp-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component49.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-id-ceo-recto
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='id_ceo_recto') Pi&egrave;ce d&apos;identit&eacute; du Dirigeant (Recto)
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#id_ceo_recto.rsform-upload-box.form-control-file(type='file', name='form[id_ceo_recto]', aria-required='true', data-rsfp-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component50.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-id-ceo-verso
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='id_ceo_verso') Pi&egrave;ce d&apos;identit&eacute; du Dirigeant (Verso)
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#id_ceo_verso.rsform-upload-box.form-control-file(type='file', name='form[id_ceo_verso]', aria-required='true', data-rsfp-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component51.formNoError  Obligatoire
+                        | &#x9;
+                        .form-row
+                          .col-md-12
+                            .form-group.row.rsform-block.rsform-block-pb3
+                              .col-sm-3.control-label.formControlLabel
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls.btn-group
+                                button#pb3Prev.rsform-button.btn.btn-warning(type='button', onclick='rsfp_changePage(3, 1, 3)') Retour
+                                button#pb3Next.rsform-button.btn.btn-success(type='button', onclick='rsfp_changePage(3, 3, 3, 1, {"parent":"","field":"is-invalid"})') Continuer
+                      // Do not remove this ID, it is used to identify the page so that the pagination script can work correctly
+                      fieldset#rsform_3_page_3.formContainer.formHidden
+                        .form-row
+                          .col-md-12
+                            .form-group.row.rsform-block.rsform-block-cgv
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='')
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                div(aria-required='true')
+                                  .form-check.form-check-inline.toggle
+                                    input#cgv0.toggle-switch__input.rsform-checkbox.form-check-input(type='checkbox', name='form[cgv][]', value="J'accepte les conditions générales d'utilisation.")
+                                    span.toggle-switch__slider
+                                    |  
+                                    label.form-check-label.toggle-switch(for='cgv0') J&apos;accepte les conditions g&eacute;n&eacute;rales d&apos;utilisation.
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component56.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-mandat
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='')
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                div(aria-required='true')
+                                  .form-check.form-check-inline.toggle
+                                    input#mandat0.toggle-switch__input.rsform-checkbox.form-check-input(type='checkbox', name='form[mandat][]', value="J'autorise et mandate la plateforme à effectuer les démarches relatives à la demande de subventions pour la transition digitale de ma société.")
+                                    span.toggle-switch__slider
+                                    |  
+                                    label.form-check-label.toggle-switch(for='mandat0')
+                                      | J&apos;autorise et mandate la plateforme &agrave; effectuer les d&eacute;marches relatives &agrave; la demande de subventions pour la transition digitale de ma soci&eacute;t&eacute;.
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component57.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-aid-limit
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='')
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                div(aria-required='true')
+                                  .form-check.form-check-inline.toggle
+                                    input#aid_limit0.toggle-switch__input.rsform-checkbox.form-check-input(type='checkbox', name='form[aid_limit][]', value="J'atteste sur l'honneur que ma société n'a pas fait l'objet d'octroi de subventions supérieures à 200.000€ durant ces 3 dernières années.")
+                                    span.toggle-switch__slider
+                                    |  
+                                    label.form-check-label.toggle-switch(for='aid_limit0')
+                                      | J&apos;atteste sur l&apos;honneur que ma soci&eacute;t&eacute; n&apos;a pas fait l&apos;objet d&apos;octroi de subventions sup&eacute;rieures &agrave; 200.000&euro; durant ces 3 derni&egrave;res ann&eacute;es.
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component58.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.rsform-block.rsform-block-ceo-signature
+                              canvas#ceo-signature(width='200px', height='200', style='border: 1px solid rgb(0, 0, 0); touch-action: none;')
+                              |                     
+                              button#clear-signature(type='button') Effacer la signature
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-signature
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='', for='signature')
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                input#signature.rsform-input-box.form-control(type='text', value='', size='20', name='form[signature]', aria-required='true')
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                                    span#component61.formNoError Obligatoire
+                            | &#x9;&#x9;&#x9;
+                            .form-group.row.rsform-block.rsform-block-submit
+                              label.col-sm-3.control-label.formControlLabel(data-toggle='tooltip', title='')
+                              | &#x9;&#x9;&#x9;&#x9;
+                              .col-sm-9.formControls
+                                button#submitPrev.rsform-button-prev.btn.btn-warning(type='button', onclick='rsfp_changePage(3, 2, 3)') &lt; Prev
+                                button#submit.rsform-submit-button.btn.btn-primary(type='submit', name='form[submit]') Envoyer
+                                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                                div
+                                  span.formValidation
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;
+                      input#total_cost(type='hidden', name='form[total_cost]', value='8,000.00')
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;
+                      input#subvention(type='hidden', name='form[subvention]', value='6,400.00')
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;
+                      input#rac_offer(type='hidden', name='form[rac_offer]', value='1,600.00')
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;
+                      input#total_pay(type='hidden', name='form[total_pay]', value='0.00')
+                      input(type='hidden', name='form[formId]', value='3')
+                      script(type='text/javascript').
+                        function rsfp_showProgress_3(page) {
+                        if (page == 0) document.getElementById('rsform_progress_3').innerHTML = '';if (page == 1) document.getElementById('rsform_progress_3').innerHTML = '';if (page == 2) document.getElementById('rsform_progress_3').innerHTML = '';if (page == 3) document.getElementById('rsform_progress_3').innerHTML = '';
+                        }
+                      input(type='hidden', name='ea4531857fe7860d0ebe634c2dfb85bf', value='1')
 
-                          .formControls 
-
-                        .form-group
-                          .formControls
-                            button.btn.btn-primary(
-                              type="submit",
-                              value="Continuer",
-                              disabled
-                            ) Continuer
-                      fieldset#fieldset2.hidden
-                        h3 Vos informations de contact
-                        .form-group
-                          label(for="siret") SIRET
-                          .formControls
-                            input#siret.form-control(
-                              name="siret",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group.hidden
-                          label(for="company-name") Raison sociale
-                          .formControls
-                            input#company-name.form-control(
-                              name="company-name",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-address") Adresse
-                          .formControls
-                            input#company-address.form-control(
-                              name="company-address",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-zip") Code postal
-                          .formControls
-                            input#company-zip.form-control(
-                              name="company-zip",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-city") Ville
-                          .formControls
-                            input#company-city.form-control(
-                              name="company-city",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-ceo") Dirigeant
-                          .formControls
-                            input#company-ceo.form-control(
-                              name="company-ceo",
-                              type="text",
-                              placeholder="none",
-                              readonly=""
-                            )
-                        .form-group.hidden
-                          label(for="company-naf") Code NAF
-                          .formControls
-                            input#company-naf.form-control(
-                              name="company-naf",
-                              type="text",
-                              placeholder="",
-                              readonly=""
-                            ) 
-                        .form-group
-                          label(for="name") Nom complet
-                          .formControls
-                            input.form-control(
-                              name="name",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group
-                          label(for="email") Email
-                          .formControls
-                            input.form-control(
-                              name="email",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group
-                          label(for="phone") Téléphone
-                          .formControls
-                            input.form-control(
-                              name="phone",
-                              type="text",
-                              placeholder="none"
-                            )
-                        .form-group
-                          .formControls
-                            button.btn.btn-primary(
-                              type="submit",
-                              value="Continuer",
-                              disabled
-                            ) Continuer
-                      fieldset#fieldset3.hidden
-                        h3 Votre dossier d'Aide Digitale
-
-                        .form-group
-                          label(for="kbis") Extrait KBIS de votre Société
-                          .formControls
-                            input#kbis.form-control(
-                              name="kbis",
-                              type="file",
-                              placeholder=""
-                            )
-                        .form-group
-                          label(for="id-recto") Pièce d'identité du Dirigeant (Recto)
-                          .formControls
-                            input#id-recto.form-control(
-                              name="id-recto",
-                              type="file",
-                              placeholder=""
-                            ) 
-                        .form-group
-                          label(for="id-verso") Pièce d'identité du Dirigeant (Verso)
-                          .formControls
-                            input#id-verso.form-control(
-                              name="id-verso",
-                              type="file",
-                              placeholder=""
-                            ) 
-                        .form-group
-                          label.formControlLabel(data-toggle="tooltip", title="")
-
-                          .formControls
-                            .form-check.form-check-inline
-                              label.form-check-label.toggle-switch(for="cgv0")
-                                input#cgv0.toggle-switch__input.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[cgv][]"
-                                ) 
-                                | J'accepte les conditions générales d'utilisation.
-                        .form-group
-                          label.formControlLabel(data-toggle="tooltip", title="")
-
-                          .formControls
-                            .form-check.form-check-inline
-                              label.form-check-label.toggle-switch(for="cgv1")
-                                input#cgv1.toggle-switch__input.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[cgv][]"
-                                ) 
-                                | J'autorise et mandate la plateforme à effectuer les démarches relatives à la demande de subventions pour la transition digitale de ma société.
-                        .form-group
-                          label.formControlLabel(data-toggle="tooltip", title="")
-
-                          .formControls
-                            .form-check.form-check-inline
-                              label.form-check-label.toggle-switch(for="cgv2")
-                                input#cgv2.toggle-switch__input.rsform-checkbox.form-check-input(
-                                  type="checkbox",
-                                  name="form[cgv][]"
-                                ) 
-                                |
-                                | J'atteste sur l'honneur que ma société n'a pas fait l'objet d'octroi de subventions supérieures à 200.000€ durant ces 3 dernières années.
-                        .form-group
-                          label(for="signature") Signature du dirigeant
-                          .formControls
-                            canvas#signature(
-                              width="200px",
-                              height="200",
-                              style="border: 1px solid #000"
-                            )
-                            |
-                            button#clear-signature(type="button") Effacer la signature
-
-                        .form-group
-                          .formControls
-                            button.btn.btn-primary(
-                              type="submit",
-                              value="Finaliser",
-                              disabled
-                            ) Finaliser
-
-        section
+        section(style='display:none;')
           .response
             article
               
@@ -332,7 +393,7 @@ block content
                   a(href='#') Lorem ipsum
                 button.empty
                   a(href='#') Lorem ipsum
-        section.dark
+        section.dark(style='display:none;')
           .response
             article
               
@@ -364,7 +425,7 @@ block content
                 button.empty
                   a(href='#') Lorem ipsum      
 
-        section
+        section(style='display:none;')
           .response
             article
               
@@ -387,7 +448,7 @@ block content
                       +svg_shopify
                     li.techno
                       +svg_frappe
-        section.blue
+        section.blue(style='display:none;')
           .response
             article
               
@@ -430,7 +491,7 @@ block content
                           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non euismod diam. Vivamus pharetra vestibulum nulla.
 
       
-        section.hero.little
+        section.hero.little(style='display:none;')
           .response
             
                 article

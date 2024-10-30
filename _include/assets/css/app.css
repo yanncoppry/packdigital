@@ -201,13 +201,6 @@ main section article h2 {
 main section article .description {
   margin-bottom: 50px;
 }
-main section article .description .big-visual {
-  float: left;
-  width: 50%;
-}
-main section article .description .big-visual img {
-  width: 100%;
-}
 main section article .description p,
 main section article .description ul {
   font-size: 16px;
@@ -626,27 +619,49 @@ footer .credits {
   font-size: 14px;
 }
 
-form fieldset {
+.card form fieldset {
   border: 0;
 }
-form h3 {
+.card form .rsformProgress p {
+  display: none;
+}
+.card form .rsformProgress .rsformProgressContainer {
+  width: 100%;
+  height: 4px;
+  background: #F3F3F3;
+  border: 0;
+  border-radius: 4px;
+}
+.card form .rsformProgress .rsformProgressContainer .rsformProgressBar {
+  width: 100%;
+  height: 4px;
+  background: #000;
+  border-radius: 4px;
+}
+.card form h3 {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: calc(16px * 1.5);
-  text-align: center;
+  text-align: left;
 }
-form .form-group {
+.card form .form-group {
   margin-bottom: 20px;
   position: relative;
 }
-form .form-group.hidden {
+.card form .form-group.hidden {
   display: none;
 }
-form .form-group label {
+.card form .form-group label {
   display: block;
   font-size: 11px;
 }
-form .form-group input[type=text] {
+.card form .form-group input#signature {
+  display: none;
+}
+.card form .form-group input#signature + div .formValidation {
+  top: -250px;
+}
+.card form .form-group input[type=text] {
   width: 100%;
   height: 30px;
   border: 1px solid #ccc;
@@ -658,94 +673,69 @@ form .form-group input[type=text] {
   z-index: 2;
   outline: none;
 }
-form .form-group input[type=text]::placeholder {
+.card form .form-group input[type=text]::placeholder {
   visibility: hidden;
 }
-form .form-group input[type=text].is-invalid {
+.card form .form-group input[type=text].is-invalid {
   border: 1px solid red;
   color: red !important;
 }
-form .form-group input[type=text].is-valid {
+.card form .form-group input[type=text].is-valid {
   border: 1px solid #222222;
   color: #222222 !important;
 }
-form .form-group input[type=file] {
+.card form .form-group input[type=file] {
   width: 100%;
-  background: #F3F3F3;
+  background: #f3f3f3;
   display: flex;
   padding: 10px;
   border-radius: 8px;
   font-family: "Space Grotesk", sans-serif;
   font-size: 10px;
 }
-form .form-group input:-webkit-autofill,
-form .form-group input input:-webkit-autofill:hover,
-form .form-group input input:-webkit-autofill:focus,
-form .form-group input input:-webkit-autofill:active {
+.card form .form-group input:-webkit-autofill,
+.card form .form-group input input:-webkit-autofill:hover,
+.card form .form-group input input:-webkit-autofill:focus,
+.card form .form-group input input:-webkit-autofill:active {
   -webkit-background-clip: text;
   transition: background-color 5000s ease-in-out 0s;
 }
-form .form-group canvas {
-  background: #F3F3F3;
+.card form .form-group canvas {
+  background: #f3f3f3;
   border: 0 !important;
   border-radius: 8px;
 }
-form .form-group .pricing {
+.card form .form-group .pricing {
   font-size: 12px;
-  display: inline-block;
 }
-form .form-group .pricing table {
+.card form .form-group .pricing table {
   width: 100%;
 }
-form .form-group .pricing table tr td {
+.card form .form-group .pricing table tr td {
   text-align: right;
 }
-form .form-group .pricing table tr td.price {
+.card form .form-group .pricing table tr td.price {
   font-weight: 700;
 }
-form .form-group .pricing table tr.rac {
+.card form .form-group .pricing table tr.rac {
   font-weight: 700;
   font-size: 18px;
 }
-form .form-group .form-check {
+.card form .form-group .form-check {
   display: inline-block;
   margin: 5px;
   padding: 0;
 }
-form .form-group .form-check:has(.toggle-switch) label.toggle-switch.checked {
+.card form .form-group .form-check:has(.toggle-switch) label.toggle-switch.checked {
   background: none !important;
   color: inherit !important;
   box-shadow: none !important;
 }
-form .form-group .form-check:has(.toggle-switch) label.toggle-switch:hover {
+.card form .form-group .form-check:has(.toggle-switch) label.toggle-switch:hover {
   box-shadow: none !important;
 }
-form .form-group .form-check .form-check-label {
-  position: relative;
-  height: 40px;
-  width: auto;
-  border: 0;
-  padding: 0 10px;
-  background: white;
-  box-shadow: 0 0 0 1px #CCC;
-  border-radius: 8px;
-  font-size: 14px;
-  text-align: center;
-  font-weight: 700;
-  display: inline-block;
-  line-height: 40px;
-  cursor: pointer !important;
-}
-form .form-group .form-check .form-check-label.checked {
-  background: #222222 !important;
-  color: white !important;
-  box-shadow: 0 0 0 2px #222222;
-}
-form .form-group .form-check .form-check-label:hover {
-  box-shadow: 0 0 0 2px #222222;
-}
-form .form-group .form-check .form-check-label input[type=checkbox],
-form .form-group .form-check .form-check-label input[type=radio] {
+.card form .form-group .form-check input[type=checkbox],
+.card form .form-group .form-check input[type=radio] {
   width: 0;
   height: 0;
   visibility: hidden;
@@ -754,12 +744,12 @@ form .form-group .form-check .form-check-label input[type=radio] {
   cursor: pointer;
   display: none;
 }
-form .form-group .form-check .form-check-label input[type=checkbox] + *,
-form .form-group .form-check .form-check-label input[type=radio] + * {
+.card form .form-group .form-check input[type=checkbox] + *,
+.card form .form-group .form-check input[type=radio] + * {
   color: white;
 }
-form .form-group .form-check .form-check-label input[type=checkbox]:checked:after,
-form .form-group .form-check .form-check-label input[type=radio]:checked:after {
+.card form .form-group .form-check input[type=checkbox]:checked:after,
+.card form .form-group .form-check input[type=radio]:checked:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -770,7 +760,34 @@ form .form-group .form-check .form-check-label input[type=radio]:checked:after {
   box-shadow: 0 0 0 1px #222222;
   border-radius: 4px;
 }
-form .form-group .form-check .toggle-switch {
+.card form .form-group .form-check .form-check-label {
+  position: relative;
+  height: 40px;
+  width: auto;
+  border: 0;
+  padding: 0 10px;
+  background: white;
+  box-shadow: 0 0 0 1px #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 40px;
+  cursor: pointer !important;
+}
+.card form .form-group .form-check .form-check-label.checked {
+  background: #222222 !important;
+  color: white !important;
+  box-shadow: 0 0 0 2px #222222;
+}
+.card form .form-group .form-check .form-check-label:hover {
+  box-shadow: 0 0 0 2px #222222;
+}
+.card form .form-group .form-check.toggle {
+  position: relative;
+}
+.card form .form-group .form-check .toggle-switch {
   align-items: center;
   padding: 0 !important;
   align-items: center;
@@ -784,12 +801,14 @@ form .form-group .form-check .toggle-switch {
   font-weight: 300;
   text-align: left;
   outline: none;
+  padding-left: 60px !important;
+  background: none;
 }
-form .form-group .form-check .toggle-switch.checked {
+.card form .form-group .form-check .toggle-switch.checked {
   background: initial !important;
   color: #222222 !important;
 }
-form .form-group .form-check .toggle-switch__input {
+.card form .form-group .form-check .toggle-switch__input {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -801,33 +820,36 @@ form .form-group .form-check .toggle-switch__input {
   width: 1px;
   white-space: nowrap;
 }
-form .form-group .form-check .toggle-switch__input:checked + .feedback + .toggle-switch__slider {
+.card form .form-group .form-check .toggle-switch__input:checked + .feedback + .toggle-switch__slider, .card form .form-group .form-check .toggle-switch__input:checked + .toggle-switch__slider {
   background-color: #222222;
 }
-form .form-group .form-check .toggle-switch__input:checked + .feedback + .toggle-switch__slider::before {
+.card form .form-group .form-check .toggle-switch__input:checked + .feedback + .toggle-switch__slider::before, .card form .form-group .form-check .toggle-switch__input:checked + .toggle-switch__slider::before {
   transform: translate(22px, -50%);
 }
-form .form-group .form-check .toggle-switch__input:disabled + .toggle-switch__slider {
+.card form .form-group .form-check .toggle-switch__input:disabled + .toggle-switch__slider {
   opacity: 0.5;
   cursor: not-allowed;
 }
-form .form-group .form-check .toggle-switch__input:disabled + .toggle-switch__slider::before {
+.card form .form-group .form-check .toggle-switch__input:disabled + .toggle-switch__slider::before {
   background-color: rgba(32, 37, 50, 0.14);
 }
-form .form-group .form-check .toggle-switch__slider {
+.card form .form-group .form-check .toggle-switch__slider {
   box-sizing: border-box;
   margin-right: 9px;
   width: 50px;
   height: 30px;
   border-radius: 30px;
-  background-color: #CCC;
+  background-color: #ccc;
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   display: inline-block;
   cursor: pointer;
   top: 10px;
   float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-form .form-group .form-check .toggle-switch__slider::before {
+.card form .form-group .form-check .toggle-switch__slider::before {
   transition: transform 75ms ease-in-out;
   content: "";
   display: block;
@@ -840,98 +862,98 @@ form .form-group .form-check .toggle-switch__slider::before {
   top: 15px;
   transform: translate(4px, -50%);
 }
-form .form-group .form-check .toggle-switch:after {
+.card form .form-group .form-check .toggle-switch:after {
   content: "";
 }
-form .form-group .form-check .toggle-switch .feedback {
+.card form .form-group .form-check .toggle-switch .feedback {
   display: none;
 }
-form .form-group .form-check.iconify .form-check-label {
-  height: 90px;
-  width: 90px;
+.card form .form-group .form-check.iconify .form-check-label {
+  height: 110px;
+  width: 100px;
   text-align: center;
   padding-top: 10px;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 11px;
   overflow: hidden;
   color: #222222;
   background: white;
   text-overflow: ellipsis;
 }
-form .form-group .form-check.iconify .form-check-label:before {
+.card form .form-group .form-check.iconify .form-check-label:before {
   content: "";
   font-family: "Material Symbols Outlined";
   position: absolute;
-  width: 80px;
+  width: 90px;
   bottom: 0;
   left: 0;
-  font-size: 35px;
+  font-size: 55px;
   font-weight: 300;
   padding: 5px;
   color: #222222;
   z-index: 3;
-  line-height: 45px;
+  line-height: 65px;
 }
-form .form-group .form-check.iconify .form-check-label .feedback {
+.card form .form-group .form-check.iconify .form-check-label .feedback {
   display: none;
 }
-form .form-group .form-check.iconify .form-check-label.checked {
+.card form .form-group .form-check.iconify .form-check-label.checked {
   background: #222222 !important;
   color: white !important;
   box-shadow: 0 0 0 2px #222222;
 }
-form .form-group .form-check.iconify .form-check-label.checked:before {
+.card form .form-group .form-check.iconify .form-check-label.checked:before {
   color: white;
 }
-form .form-group .form-check.iconify [for^=type_produit0]:before {
+.card form .form-group .form-check.iconify [for^=packdigital0]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_produit1]:before {
+.card form .form-group .form-check.iconify [for^=packdigital1]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_produit2]:before {
+.card form .form-group .form-check.iconify [for^=packdigital2]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_produit3]:before {
+.card form .form-group .form-check.iconify [for^=packdigital3]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_produit4]:before {
+.card form .form-group .form-check.iconify [for^=packdigital4]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_produit5]:before {
+.card form .form-group .form-check.iconify [for^=packdigital5]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_resident1]:before {
+.card form .form-group .form-check.iconify [for^=type_resident1]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_habitation0]:before {
+.card form .form-group .form-check.iconify [for^=type_habitation0]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_habitation1]:before {
+.card form .form-group .form-check.iconify [for^=type_habitation1]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_renovation0]:before {
+.card form .form-group .form-check.iconify [for^=type_renovation0]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_renovation1]:before {
+.card form .form-group .form-check.iconify [for^=type_renovation1]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_renovation2]:before {
+.card form .form-group .form-check.iconify [for^=type_renovation2]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_renovation3]:before {
+.card form .form-group .form-check.iconify [for^=type_renovation3]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_renovation4]:before {
+.card form .form-group .form-check.iconify [for^=type_renovation4]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_renovation5]:before {
+.card form .form-group .form-check.iconify [for^=type_renovation5]:before {
   content: "";
 }
-form .form-group .form-check.iconify [for^=type_renovation6]:before {
+.card form .form-group .form-check.iconify [for^=type_renovation6]:before {
   content: "";
 }
-form .form-group .form-check.numberify .form-check-label {
+.card form .form-group .form-check.numberify .form-check-label {
   height: 40px;
   width: 40px;
   text-align: center;
@@ -942,8 +964,8 @@ form .form-group .form-check.numberify .form-check-label {
   background: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px 0px, rgba(0, 0, 0, 0.3) 0px 30px 60px -10px;
 }
-form .form-group small,
-form .form-group .feedback {
+.card form .form-group small,
+.card form .form-group .feedback {
   display: block;
   font-size: 9px;
   line-height: 9px;
@@ -951,8 +973,8 @@ form .form-group .feedback {
   position: relative;
   text-align: left;
 }
-form .form-group small:before,
-form .form-group .feedback:before {
+.card form .form-group small:before,
+.card form .form-group .feedback:before {
   content: "";
   border: 1px solid;
   width: 10px;
@@ -968,36 +990,39 @@ form .form-group .feedback:before {
   text-align: center;
   font-size: 10px;
 }
-form .form-group small:nth-child(3),
-form .form-group .feedback:nth-child(3) {
+.card form .form-group small:nth-child(3),
+.card form .form-group .feedback:nth-child(3) {
   display: none;
 }
-form .form-group .invalid-feedback {
+.card form .form-group .invalid-feedback {
   color: red;
 }
-form .form-group .invalid-feedback:before {
+.card form .form-group .invalid-feedback:before {
   content: "";
 }
-form .form-group .valid-feedback {
+.card form .form-group .valid-feedback {
   color: #222222;
 }
-form .form-group .valid-feedback:before {
+.card form .form-group .valid-feedback:before {
   content: "";
 }
-form .form-group button {
-  background: #003398;
+.card form .form-group button {
+  background: #222222;
   font-family: "Space Grotesk", sans-serif;
   color: #fafafa;
-  padding: 10px 25px;
+  padding: 10px 30px;
   border-radius: 30px;
   border: 0;
-  font-size: 19px;
+  margin: 0 5px;
   font-weight: 700;
 }
-form .form-group button:disabled {
+.card form .form-group button:disabled {
   opacity: 0.2;
 }
-form .form-group button#clear-signature {
+.card form .form-group button.btn-warning {
+  display: none;
+}
+.card form .form-group button#clear-signature {
   text-transform: uppercase;
   border-radius: 3px;
   font-size: 9px;
@@ -1005,7 +1030,43 @@ form .form-group button#clear-signature {
   background: none;
   cursor: pointer;
 }
-form .form-group:has(input[type=text]) label {
+.card form .form-group .formValidation {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: absolute;
+  top: -11px;
+  left: -45px;
+  z-index: 2;
+  transform: skewY(-5deg);
+  z-index: 4;
+}
+.card form .form-group .formValidation .formError, .card form .form-group .formValidation .formNoError {
+  padding: 4px 8px;
+  height: 20px;
+  line-height: 20px;
+  background: red;
+  color: #fff;
+  font-weight: normal;
+  z-index: 4;
+  position: relative;
+  border-radius: 0 4px 4px 0;
+  font-size: 9px;
+  font-weight: 700;
+}
+.card form .form-group .formValidation .formError:before, .card form .form-group .formValidation .formNoError:before {
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 15px solid #8c0505;
+  border-left: 15px solid transparent;
+  position: absolute;
+  z-index: 3;
+  top: 100%;
+  left: 0;
+}
+.card form .form-group:has(input[type=text]) label {
   display: block;
   position: absolute;
   height: 30px;
@@ -1013,10 +1074,10 @@ form .form-group:has(input[type=text]) label {
   padding: 0 10px;
   font-size: 11px;
 }
-form .form-group:has(input[type=text]) label:has(+ [aria-live=polite] + .formControls input:focus),
-form .form-group:has(input[type=text]) label:has(+ input:focus),
-form .form-group:has(input[type=text]) label:has(+ [aria-live=polite] + .formControls input:not(:placeholder-shown)),
-form .form-group:has(input[type=text]) label:has(+ .formControls input:not(:placeholder-shown)) {
+.card form .form-group:has(input[type=text]) label:has(+ .formControls input:focus),
+.card form .form-group:has(input[type=text]) label:has(+ input:focus),
+.card form .form-group:has(input[type=text]) label:has(+ .formControls input:not(:placeholder-shown)),
+.card form .form-group:has(input[type=text]) label:has(+ .formControls input:not(:placeholder-shown)) {
   background: white;
   zoom: 0.75;
   left: 13px;

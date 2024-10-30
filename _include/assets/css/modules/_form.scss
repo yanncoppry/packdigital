@@ -1,21 +1,44 @@
-// FORM
-
-form {
+.card {
+  
+  @media all and (max-width: 440px) {
+    
+  }
+  form {
     fieldset {
       border: 0;
     }
+    .rsformProgress {
+      p {
+        display: none;
+      }
+      .rsformProgressContainer {
+        width: 100%;
+        height: 4px;
+        background: #F3F3F3;
+        border: 0;
+        border-radius: 4px;
+        .rsformProgressBar {
+          width: 100%;
+          height: 4px;
+          background: #000;
+          border-radius: 4px;
+
+        }
+      }
+    }
+    
+    
     h3 {
       font-size: $base-font-size;
       line-height: $base-font-size;
       margin-bottom: calc(#{$base-font-size} * 1.5);
-      text-align: center;
+      text-align: left;
     }
     .form-group {
-
       margin-bottom: 20px;
       position: relative;
       &.hidden {
-        display: none;
+        display:none;
       }
       label {
         display: block;
@@ -23,6 +46,12 @@ form {
         font-size: 11px;
       }
       input {
+        &#signature {
+            display: none;
+            + div .formValidation{
+              top:-250px;
+            }
+        }
         &[type="text"] {
           width: 100%;
           height: 30px;
@@ -47,9 +76,9 @@ form {
             color: $dark-color !important;
           }
         }
-        &[type="file"]{
+        &[type="file"] {
           width: 100%;
-          background: #F3F3F3;
+          background: #f3f3f3;
           display: flex;
           padding: 10px;
           border-radius: 8px;
@@ -64,32 +93,29 @@ form {
           transition: background-color 5000s ease-in-out 0s;
         }
       }
-      canvas{
-        background:#F3F3F3;
-        border:0 !important;
-        border-radius:8px;
+      canvas {
+        background: #f3f3f3;
+        border: 0 !important;
+        border-radius: 8px;
       }
-      .pricing{
-        font-size:12px;
-        display: inline-block;
-        table{
-          width:100%;
-          tr{
-            td{
-              text-align:right;
-              &.price{
-                font-weight:700;
+      .pricing {
+        font-size: 12px;
+        table {
+          width: 100%;
+          tr {
+            td {
+              text-align: right;
+              &.price {
+                font-weight: 700;
               }
             }
-            &.total{
-              
+            &.total {
             }
-            &.aide{
-              
+            &.aide {
             }
-            &.rac{
-              font-weight:700;
-              font-size:18px;
+            &.rac {
+              font-weight: 700;
+              font-size: 18px;
             }
           }
         }
@@ -98,46 +124,19 @@ form {
         display: inline-block;
         margin: 5px;
         padding: 0;
-        &:has(.toggle-switch){
-
-          label.toggle-switch{
+        &:has(.toggle-switch) {
+          label.toggle-switch {
             &.checked {
               background: none !important;
               color: inherit !important;
               box-shadow: none !important;
             }
-            &:hover{
+            &:hover {
               box-shadow: none !important;
             }
           }
         }
-
-        .form-check-label {
-          position: relative;
-          height: 40px;
-          width: auto;
-          border: 0;
-          padding: 0 10px;
-          background: white;
-          box-shadow: 0 0 0 1px #CCC;
-          border-radius: 8px;
-          font-size: 14px;
-          text-align: center;
-          font-weight: 700;
-          display: inline-block;
-          line-height: 40px;
-          cursor: pointer !important;
-          &.checked {
-            background: $dark-color !important;
-            color: white !important;
-            box-shadow: 0 0 0 2px $dark-color;
-          }
-          &:hover{
-            box-shadow: 0 0 0 2px $dark-color;
-          }
-          
-
-          input[type="checkbox"],
+        input[type="checkbox"],
           input[type="radio"] {
             width: 0;
             height: 0;
@@ -165,10 +164,37 @@ form {
               }
             }
           }
-        }
 
-        .toggle-switch {
+        .form-check-label {
+          position: relative;
+          height: 40px;
+          width: auto;
+          border: 0;
+          padding: 0 10px;
+          background: white;
+          box-shadow: 0 0 0 1px #ccc;
+          border-radius: 8px;
+          font-size: 14px;
+          text-align: center;
+          font-weight: 700;
+          display: inline-block;
+          line-height: 40px;
+          cursor: pointer !important;
+          &.checked {
+            background: $dark-color !important;
+            color: white !important;
+            box-shadow: 0 0 0 2px $dark-color;
+          }
+          &:hover {
+            box-shadow: 0 0 0 2px $dark-color;
+          }
+
           
+        }
+        &.toggle{
+          position:relative;
+        }
+        .toggle-switch {
           align-items: center;
           padding: 0 !important;
           align-items: center;
@@ -176,17 +202,19 @@ form {
           height: initial;
           width: 100%;
           box-shadow: initial;
-          font-size:13px;
-          line-height:16px;
-          text-align:justify !important;
+          font-size: 13px;
+          line-height: 16px;
+          text-align: justify !important;
           font-weight: 300;
           text-align: left;
           outline: none;
+          padding-left:60px !important;
+          background:none;
+          
           &.checked {
             background: initial !important;
             color: $dark-color !important;
             &:after {
-             
             }
           }
 
@@ -202,7 +230,8 @@ form {
             width: 1px;
             white-space: nowrap;
 
-            &:checked + .feedback + .toggle-switch__slider {
+            &:checked + .feedback + .toggle-switch__slider,
+            &:checked + .toggle-switch__slider{
               background-color: $dark-color;
 
               &::before {
@@ -226,12 +255,16 @@ form {
             width: 50px;
             height: 30px;
             border-radius: 30px;
-            background-color: #CCC;
+            background-color: #ccc;
             box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
             display: inline-block;
             cursor: pointer;
             top: 10px;
             float: left;
+            position: absolute;
+            left: 0;
+            top: 0;
+
 
             &::before {
               transition: transform 75ms ease-in-out;
@@ -251,25 +284,23 @@ form {
           &:after {
             content: "";
           }
-          .feedback{
-            display:none;
+          .feedback {
+            display: none;
           }
         }
         &.iconify {
           @media all and (max-width: 600px) {
-            
           }
           .form-check-label {
-            height: 90px;
-            width: 90px;
+            height: 110px;
+            width: 100px;
             text-align: center;
             padding-top: 10px;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 11px;
             overflow: hidden;
             color: $dark-color;
             background: white;
-            
 
             text-overflow: ellipsis;
             @media all and (max-width: 600px) {
@@ -279,21 +310,21 @@ form {
               content: "\e907";
               font-family: "Material Symbols Outlined";
               position: absolute;
-              width: 80px;
+              width: 90px;
 
               bottom: 0;
               left: 0;
-              font-size: 35px;
+              font-size: 55px;
               font-weight: 300;
               padding: 5px;
               color: $dark-color;
               z-index: 3;
-              line-height: 45px;
+              line-height: 65px;
               @media all and (max-width: 600px) {
               }
             }
-            .feedback{
-              display:none;
+            .feedback {
+              display: none;
             }
             &.checked {
               background: $dark-color !important;
@@ -316,33 +347,33 @@ form {
               }
             }
           }
-          [for^="type_produit0"] {
+          [for^="packdigital0"] {
             &:before {
               content: "\f1c5";
             }
           }
-          [for^="type_produit1"] {
+          [for^="packdigital1"] {
             &:before {
               content: "\e8cc";
             }
           }
-          [for^="type_produit2"] {
+          [for^="packdigital2"] {
             &:before {
               content: "\e8f4";
             }
           }
-          [for^="type_produit3"] {
+          [for^="packdigital3"] {
             &:before {
               content: "\e720";
             }
           }
-          [for^="type_produit4"] {
+          [for^="packdigital4"] {
             &:before {
               content: "\e870";
             }
           }
 
-          [for^="type_produit5"] {
+          [for^="packdigital5"] {
             &:before {
               content: "\e2c3";
             }
@@ -456,24 +487,66 @@ form {
         }
       }
       button {
-        background: $color-1;
+        background: $dark-color;
         font-family: $base-font;
         color: $light-color;
-        padding: 10px 25px;
+        padding: 10px 30px;
         border-radius: 30px;
         border: 0;
-        font-size: 19px;
+        margin: 0 5px;
         font-weight: 700;
         &:disabled {
-          
           opacity: 0.2;
         }
-        &#clear-signature{
-          text-transform:uppercase;
-          border-radius:3px;
-          font-size:9px;
-          color:$dark-color;background:none;
-          cursor:pointer;
+        &.btn-warning{
+          display:none;
+        }
+        &#clear-signature {
+          text-transform: uppercase;
+          border-radius: 3px;
+          font-size: 9px;
+          color: $dark-color;
+          background: none;
+          cursor: pointer;
+        }
+      }
+      .formValidation {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        top: -11px;
+        left: -45px;
+        z-index: 2;
+        transform: skewY(-5deg);
+        z-index: 4;
+        .formNoError{
+        
+        }
+        .formError, .formNoError{
+          padding:  4px 8px;
+          height: 20px;
+          line-height: 20px;
+          background: red;
+          color: #fff;
+          font-weight: normal;
+          z-index: 4;
+          position: relative;
+          border-radius: 0 4px 4px 0;
+          font-size: 9px;
+          font-weight:700;
+          &:before {
+            content: "";
+            display: inline-block;
+            height: 0;
+            width: 0;
+            border-top: 15px solid #8c0505;
+            border-left: 15px solid transparent;
+            position: absolute;
+            z-index: 3;
+            top: 100%;
+            left: 0;
+          }
         }
       }
       &:has(input[type="text"]) {
@@ -485,10 +558,9 @@ form {
           padding: 0 10px;
           font-size: 11px;
         }
-        label:has(+ [aria-live="polite"] + .formControls input:focus),
+        label:has(+ .formControls input:focus),
         label:has(+ input:focus),
-        label:has(+ [aria-live="polite"]
-            + .formControls
+        label:has(+ .formControls
             input:not(:placeholder-shown)),
         label:has(+ .formControls input:not(:placeholder-shown)) {
           background: white;
@@ -502,3 +574,4 @@ form {
       }
     }
   }
+}

@@ -355,7 +355,6 @@
                                 </svg>
                         </li>
                       </ul>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non euismod diam. Vivamus pharetra vestibulum nulla.</p>
                     </div>
                   </article>
                 </div>
@@ -370,207 +369,293 @@
                       </div>
                     </div>
                     <div class="form">
-                      <form id="myForm">
-                        <fieldset id="fieldset1">
-                          <h3>Votre Pack</h3>
-                          <div class="form-group">
-                            <label for="siret">Composez votre Pack digital :</label>
-                            <div class="formControls">
-                              <div class="form-check form-check-inline iconify">
-                                <label class="form-check-label" for="type_produit0">
-                                  <input class="iconed rsform-checkbox form-check-input" id="type_produit0" type="checkbox" name="form[type_produit][]" value="Site internet Vitrine">Site internet Vitrine
-                                </label>
-                              </div>
-                              <div class="form-check form-check-inline iconify">
-                                <label class="form-check-label" for="type_produit1">
-                                  <input class="iconed rsform-checkbox form-check-input" id="type_produit1" type="checkbox" name="form[type_produit][]" value="Site internet E-Commerce">Site internet E-Commerce
-                                </label>
-                              </div>
-                              <div class="form-check form-check-inline iconify">
-                                <label class="form-check-label" for="type_produit3">
-                                  <input class="iconed rsform-checkbox form-check-input" id="type_produit3" type="checkbox" name="form[type_produit][]" value="Devis et Facturation">Devis et Facturation
-                                </label>
-                              </div>
-                              <div class="form-check form-check-inline iconify">
-                                <label class="form-check-label" for="type_produit2">
-                                  <input class="iconed rsform-checkbox form-check-input" id="type_produit2" type="checkbox" name="form[type_produit][]" value="Site Internet E-Réservation">Système de Réservation en ligne
-                                </label>
-                              </div>
-                              <div class="form-check form-check-inline iconify">
-                                <label class="form-check-label" for="type_produit4">
-                                  <input class="iconed rsform-checkbox form-check-input" id="type_produit4" type="checkbox" name="form[type_produit][]" value="Système de paiement en ligne">Système de Paiement en ligne
-                                </label>
-                              </div>
-                              <div class="form-check form-check-inline iconify">
-                                <label class="form-check-label" for="type_produit5">
-                                  <input class="iconed rsform-checkbox form-check-input" id="type_produit5" type="checkbox" name="form[type_produit][]" value="Sauvegardes Cloud automatisées">Sauvegardes Cloud automatisées
-                                </label>
+                      <form id="userForm" method="post" enctype="multipart/form-data" action="http://localhost:8084/">
+                        <div class="rsformProgress" id="rsform_progress_3"></div>
+                        <div id="rsform_error_3" style="display: none;">
+                          <p class="formRed" style="font-size:9px;">Veullez remplir tous les champs du formulaire.</p>
+                        </div>
+                        <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly-->
+                        <fieldset class="formContainer formHidden" id="rsform_3_page_0">
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <div class="form-group rsform-block rsform-block-pack-title">
+                                <h3>Votre Pack Digital</h3>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-packdigital">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="">Composez votre Pack Digital :</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <div aria-required="true">
+                                    <div class="form-check form-check-inline iconify">
+                                      <input class="iconed rsform-checkbox form-check-input" id="packdigital0" type="checkbox" checked="checked" name="form[packdigital][]" value="Site Internet Vitrine"> 
+                                      <label class="form-check-label checked" for="packdigital0">Site Internet Vitrine</label>
+                                    </div> 
+                                    <div class="form-check form-check-inline iconify">
+                                      <input class="iconed rsform-checkbox form-check-input" id="packdigital1" type="checkbox" name="form[packdigital][]" value="Site Internet E-Commerce"> 
+                                      <label class="form-check-label" for="packdigital1">Site Internet E-Commerce</label>
+                                    </div> 
+                                    <div class="form-check form-check-inline iconify">
+                                      <input class="iconed rsform-checkbox form-check-input" id="packdigital2" type="checkbox" checked="checked" name="form[packdigital][]" value="CRM Devis/Facturation"> 
+                                      <label class="form-check-label checked" for="packdigital2">CRM Devis/Facturation</label>
+                                    </div> 
+                                    <div class="form-check form-check-inline iconify">
+                                      <input class="iconed rsform-checkbox form-check-input" id="packdigital3" type="checkbox" name="form[packdigital][]" value="Système de Paiement à distance"> 
+                                      <label class="form-check-label" for="packdigital3">Syst&egrave;me de Paiement &agrave; distance</label>
+                                    </div>
+                                  </div>&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component23">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group rsform-block rsform-block-pricing">
+                                <div class="pricing">
+                                  <table>
+                                    <tbody>
+                                      <tr class="total">
+                                        <td>Votre Pack Digital co&ucirc;te :</td>
+                                        <td class="price">
+                                          <div class="total_cost_txt">8,000.00 &euro;</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="aide">
+                                        <td>Aide Conseil R&eacute;gional (80%) :</td>
+                                        <td class="price">
+                                          <div class="subvention_txt">6,400.00 &euro;</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="aide">
+                                        <td>OFFRE Pack RAC (20%) :</td>
+                                        <td class="price">
+                                          <div class="rac_offer_txt">1,600.00 &euro;</div>
+                                        </td>
+                                      </tr>
+                                      <tr class="rac">
+                                        <td>Reste &agrave; payer :</td>
+                                        <td class="price">
+                                          <div class="total_pay_txt">0.00 &euro;</div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="pricing">
-                              <table>
-                                <tbody>
-                                  <tr class="total">
-                                    <td>Votre Pack Digital coûte :</td>
-                                    <td class="price">12.500€</td>
-                                  </tr>
-                                  <tr class="aide">
-                                    <td>Aide Conseil Régional (80%) :</td>
-                                    <td class="price">- 10.000€</td>
-                                  </tr>
-                                  <tr class="aide">
-                                    <td>OFFRE Pack RAC (20%) :</td>
-                                    <td class="price">- 2.500€</td>
-                                  </tr>
-                                  <tr class="rac">
-                                    <td>Reste à payer :</td>
-                                    <td class="price">0€</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                            <div class="formControls"> </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="formControls">
-                              <button class="btn btn-primary" type="submit" value="Continuer" disabled>Continuer</button>
+                          </div>&#x9;
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <div class="form-group row rsform-block rsform-block-pb1">
+                                <div class="col-sm-3 control-label formControlLabel"></div>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls btn-group">
+                                  <button class="rsform-button btn btn-success" id="pb1Next" type="button" onclick="rsfp_changePage(3, 1, 3, 1, {&quot;parent&quot;:&quot;&quot;,&quot;field&quot;:&quot;is-invalid&quot;})">Continuer</button>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </fieldset>
-                        <fieldset class="hidden" id="fieldset2">
-                          <h3>Vos informations de contact</h3>
-                          <div class="form-group">
-                            <label for="siret">SIRET</label>
-                            <div class="formControls">
-                              <input class="form-control" id="siret" name="siret" type="text" placeholder="none">
+                        <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly-->
+                        <fieldset class="formContainer formHidden" id="rsform_3_page_1">
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <div class="form-group rsform-block rsform-block-contact-title">
+                                <h3>Vos informations de contact</h3>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-siret">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="siret">Quel est le num&eacute;ro de SIRET ?</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-input-box form-control" id="siret" type="text" value="" size="20" placeholder="0393939393" name="form[siret]" aria-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component34">Invalide</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-company-name">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="company-name">Quelle est la raison sociale de votre soci&eacute;t&eacute; ?</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-input-box form-control" id="company-name" type="text" value="" size="20" placeholder="Quelle est la raison sociale de votre société ?" name="form[company-name]" aria-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component36">Le Siret est invalide</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-company-address hidden">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="company-address">Quelle est l&apos;adresse de votre soci&eacute;t&eacute; ?</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="hidden rsform-input-box form-control" id="company-address" type="text" value="" size="20" name="form[company-address]">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component37">Invalid Input</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-company-zip hidden">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="company-zip">Code postal</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="hidden rsform-input-box form-control" id="company-zip" type="text" value="" size="20" name="form[company-zip]">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component38">Invalid Input</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-company-city hidden">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="company-city">Ville/Commune</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="hidden rsform-input-box form-control" id="company-city" type="text" value="" size="20" name="form[company-city]">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component39">Invalid Input</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-company-ceo hidden">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="company-ceo">Dirigeant</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="hidden rsform-input-box form-control" id="company-ceo" type="text" value="" size="20" name="form[company-ceo]">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component40">Invalid Input</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-company-naf hidden">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="company-naf">Code NAF</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="hidden rsform-input-box form-control" id="company-naf" type="text" value="" size="20" name="form[company-naf]">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component41">Invalid Input</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-name">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="name">Quel est votre nom complet ?</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-input-box form-control" id="name" type="text" value="" size="20" placeholder="Quel est votre nom complet ?" name="form[name]" aria-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component42">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-email">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="email">Quel est votre adresse email ?</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-input-box form-control" id="email" type="text" value="" size="20" placeholder="Quel est votre adresse email ?" name="form[email]" aria-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component43">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-phone">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="phone">Quel est votre num&eacute;ro de t&eacute;l&eacute;phone ?</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-input-box form-control" id="phone" type="text" value="" size="20" placeholder="Quel est votre numéro de téléphone ?" name="form[phone]" aria-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component44">Obligatoire</span></span></div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="form-group hidden">
-                            <label for="company-name">Raison sociale</label>
-                            <div class="formControls">
-                              <input class="form-control" id="company-name" name="company-name" type="text" placeholder="none" readonly="">
-                            </div>
-                          </div>
-                          <div class="form-group hidden">
-                            <label for="company-address">Adresse</label>
-                            <div class="formControls">
-                              <input class="form-control" id="company-address" name="company-address" type="text" placeholder="none" readonly="">
-                            </div>
-                          </div>
-                          <div class="form-group hidden">
-                            <label for="company-zip">Code postal</label>
-                            <div class="formControls">
-                              <input class="form-control" id="company-zip" name="company-zip" type="text" placeholder="none" readonly="">
-                            </div>
-                          </div>
-                          <div class="form-group hidden">
-                            <label for="company-city">Ville</label>
-                            <div class="formControls">
-                              <input class="form-control" id="company-city" name="company-city" type="text" placeholder="none" readonly="">
-                            </div>
-                          </div>
-                          <div class="form-group hidden">
-                            <label for="company-ceo">Dirigeant</label>
-                            <div class="formControls">
-                              <input class="form-control" id="company-ceo" name="company-ceo" type="text" placeholder="none" readonly="">
-                            </div>
-                          </div>
-                          <div class="form-group hidden">
-                            <label for="company-naf">Code NAF</label>
-                            <div class="formControls">
-                              <input class="form-control" id="company-naf" name="company-naf" type="text" placeholder="" readonly="">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <div class="formControls">
-                              <input class="form-control" name="name" type="text" placeholder="none">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Email</label>
-                            <div class="formControls">
-                              <input class="form-control" name="email" type="text" placeholder="none">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <div class="formControls">
-                              <input class="form-control" name="phone" type="text" placeholder="none">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="formControls">
-                              <button class="btn btn-primary" type="submit" value="Continuer" disabled>Continuer</button>
+                          </div>&#x9;
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <div class="form-group row rsform-block rsform-block-pb2">
+                                <div class="col-sm-3 control-label formControlLabel"></div>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls btn-group">
+                                  <button class="rsform-button btn btn-warning" id="pb2Prev" type="button" onclick="rsfp_changePage(3, 0, 3)">Retour</button>
+                                  <button class="rsform-button btn btn-success" id="pb2Next" type="button" onclick="rsfp_changePage(3, 2, 3, 1, {&quot;parent&quot;:&quot;&quot;,&quot;field&quot;:&quot;is-invalid&quot;})">Continuer</button>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </fieldset>
-                        <fieldset class="hidden" id="fieldset3">
-                          <h3>Votre dossier d'Aide Digitale</h3>
-                          <div class="form-group">
-                            <label for="kbis">Extrait KBIS de votre Société</label>
-                            <div class="formControls">
-                              <input class="form-control" id="kbis" name="kbis" type="file" placeholder="">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="id-recto">Pièce d'identité du Dirigeant (Recto)</label>
-                            <div class="formControls">
-                              <input class="form-control" id="id-recto" name="id-recto" type="file" placeholder="">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="id-verso">Pièce d'identité du Dirigeant (Verso)</label>
-                            <div class="formControls">
-                              <input class="form-control" id="id-verso" name="id-verso" type="file" placeholder="">
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="formControlLabel" data-toggle="tooltip" title=""></label>
-                            <div class="formControls">
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label toggle-switch" for="cgv0">
-                                  <input class="toggle-switch__input rsform-checkbox form-check-input" id="cgv0" type="checkbox" name="form[cgv][]">J'accepte les conditions générales d'utilisation.
-                                </label>
+                        <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly-->
+                        <fieldset class="formContainer" id="rsform_3_page_2">
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <div class="form-group rsform-block rsform-block-aidfile-title">
+                                <h3>Votre Dossier d&apos;Aide Num&eacute;rique</h3>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-kbis">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="kbis">Extrait KBIS de votre Soci&eacute;t&eacute;</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-upload-box form-control-file" id="kbis" type="file" name="form[kbis]" aria-required="true" data-rsfp-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component49">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-id-ceo-recto">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="id_ceo_recto">Pi&egrave;ce d&apos;identit&eacute; du Dirigeant (Recto)</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-upload-box form-control-file" id="id_ceo_recto" type="file" name="form[id_ceo_recto]" aria-required="true" data-rsfp-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component50">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-id-ceo-verso">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="id_ceo_verso">Pi&egrave;ce d&apos;identit&eacute; du Dirigeant (Verso)</label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-upload-box form-control-file" id="id_ceo_verso" type="file" name="form[id_ceo_verso]" aria-required="true" data-rsfp-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component51"> Obligatoire</span></span></div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="formControlLabel" data-toggle="tooltip" title=""></label>
-                            <div class="formControls">
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label toggle-switch" for="cgv1">
-                                  <input class="toggle-switch__input rsform-checkbox form-check-input" id="cgv1" type="checkbox" name="form[cgv][]">J'autorise et mandate la plateforme à effectuer les démarches relatives à la demande de subventions pour la transition digitale de ma société.
-                                </label>
+                          </div>&#x9;
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <div class="form-group row rsform-block rsform-block-pb3">
+                                <div class="col-sm-3 control-label formControlLabel"></div>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls btn-group">
+                                  <button class="rsform-button btn btn-warning" id="pb3Prev" type="button" onclick="rsfp_changePage(3, 1, 3)">Retour</button>
+                                  <button class="rsform-button btn btn-success" id="pb3Next" type="button" onclick="rsfp_changePage(3, 3, 3, 1, {&quot;parent&quot;:&quot;&quot;,&quot;field&quot;:&quot;is-invalid&quot;})">Continuer</button>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="formControlLabel" data-toggle="tooltip" title=""></label>
-                            <div class="formControls">
-                              <div class="form-check form-check-inline">
-                                <label class="form-check-label toggle-switch" for="cgv2">
-                                  <input class="toggle-switch__input rsform-checkbox form-check-input" id="cgv2" type="checkbox" name="form[cgv][]">
-                                  J'atteste sur l'honneur que ma société n'a pas fait l'objet d'octroi de subventions supérieures à 200.000€ durant ces 3 dernières années.
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label for="signature">Signature du dirigeant</label>
-                            <div class="formControls">
-                              <canvas id="signature" width="200px" height="200" style="border: 1px solid #000"></canvas>
-                              <button id="clear-signature" type="button">Effacer la signature</button>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <div class="formControls">
-                              <button class="btn btn-primary" type="submit" value="Finaliser" disabled>Finaliser</button>
                             </div>
                           </div>
                         </fieldset>
+                        <!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly-->
+                        <fieldset class="formContainer formHidden" id="rsform_3_page_3">
+                          <div class="form-row">
+                            <div class="col-md-12">
+                              <div class="form-group row rsform-block rsform-block-cgv">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title=""></label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <div aria-required="true">
+                                    <div class="form-check form-check-inline toggle">
+                                      <input class="toggle-switch__input rsform-checkbox form-check-input" id="cgv0" type="checkbox" name="form[cgv][]" value="J'accepte les conditions générales d'utilisation."><span class="toggle-switch__slider"></span> 
+                                      <label class="form-check-label toggle-switch" for="cgv0">J&apos;accepte les conditions g&eacute;n&eacute;rales d&apos;utilisation.</label>
+                                    </div>
+                                  </div>&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component56">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-mandat">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title=""></label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <div aria-required="true">
+                                    <div class="form-check form-check-inline toggle">
+                                      <input class="toggle-switch__input rsform-checkbox form-check-input" id="mandat0" type="checkbox" name="form[mandat][]" value="J'autorise et mandate la plateforme à effectuer les démarches relatives à la demande de subventions pour la transition digitale de ma société."><span class="toggle-switch__slider"></span> 
+                                      <label class="form-check-label toggle-switch" for="mandat0">J&apos;autorise et mandate la plateforme &agrave; effectuer les d&eacute;marches relatives &agrave; la demande de subventions pour la transition digitale de ma soci&eacute;t&eacute;.</label>
+                                    </div>
+                                  </div>&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component57">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-aid-limit">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title=""></label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <div aria-required="true">
+                                    <div class="form-check form-check-inline toggle">
+                                      <input class="toggle-switch__input rsform-checkbox form-check-input" id="aid_limit0" type="checkbox" name="form[aid_limit][]" value="J'atteste sur l'honneur que ma société n'a pas fait l'objet d'octroi de subventions supérieures à 200.000€ durant ces 3 dernières années."><span class="toggle-switch__slider"></span> 
+                                      <label class="form-check-label toggle-switch" for="aid_limit0">J&apos;atteste sur l&apos;honneur que ma soci&eacute;t&eacute; n&apos;a pas fait l&apos;objet d&apos;octroi de subventions sup&eacute;rieures &agrave; 200.000&euro; durant ces 3 derni&egrave;res ann&eacute;es.</label>
+                                    </div>
+                                  </div>&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component58">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group rsform-block rsform-block-ceo-signature">
+                                <canvas id="ceo-signature" width="200px" height="200" style="border: 1px solid rgb(0, 0, 0); touch-action: none;"></canvas>                    
+                                <button id="clear-signature" type="button">Effacer la signature</button>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-signature">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="signature"></label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <input class="rsform-input-box form-control" id="signature" type="text" value="" size="20" name="form[signature]" aria-required="true">&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"><span class="formNoError" id="component61">Obligatoire</span></span></div>
+                                </div>
+                              </div>&#x9;&#x9;&#x9;
+                              <div class="form-group row rsform-block rsform-block-submit">
+                                <label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title=""></label>&#x9;&#x9;&#x9;&#x9;
+                                <div class="col-sm-9 formControls">
+                                  <button class="rsform-button-prev btn btn-warning" id="submitPrev" type="button" onclick="rsfp_changePage(3, 2, 3)">&lt; Prev</button>
+                                  <button class="rsform-submit-button btn btn-primary" id="submit" type="submit" name="form[submit]">Envoyer</button>&#x9;&#x9;&#x9;&#x9;&#x9;
+                                  <div><span class="formValidation"></span></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>&#x9;&#x9;&#x9;&#x9;&#x9;
+                        <input id="total_cost" type="hidden" name="form[total_cost]" value="8,000.00">&#x9;&#x9;&#x9;&#x9;&#x9;
+                        <input id="subvention" type="hidden" name="form[subvention]" value="6,400.00">&#x9;&#x9;&#x9;&#x9;&#x9;
+                        <input id="rac_offer" type="hidden" name="form[rac_offer]" value="1,600.00">&#x9;&#x9;&#x9;&#x9;&#x9;
+                        <input id="total_pay" type="hidden" name="form[total_pay]" value="0.00">
+                        <input type="hidden" name="form[formId]" value="3">
+                        <script type="text/javascript">
+                          function rsfp_showProgress_3(page) {
+                          if (page == 0) document.getElementById('rsform_progress_3').innerHTML = '';if (page == 1) document.getElementById('rsform_progress_3').innerHTML = '';if (page == 2) document.getElementById('rsform_progress_3').innerHTML = '';if (page == 3) document.getElementById('rsform_progress_3').innerHTML = '';
+                          }
+                        </script>
+                        <input type="hidden" name="ea4531857fe7860d0ebe634c2dfb85bf" value="1">
                       </form>
                     </div>
                   </div>
@@ -578,7 +663,7 @@
               </div>
             </div>
           </section>
-          <section>
+          <section style="display:none;">
             <div class="response">
               <article>
                 <h2>Qu'est-ce qu'un Pack Digital ?</h2>
@@ -613,7 +698,7 @@
               </article>
             </div>
           </section>
-          <section class="dark">
+          <section class="dark" style="display:none;">
             <div class="response">
               <article>
                 <h2>Que contient le Pack Digital ?</h2>
@@ -645,7 +730,7 @@
               </article>
             </div>
           </section>
-          <section>
+          <section style="display:none;">
             <div class="response">
               <article>
                 <h2>Boostez votre activité avec des technologies actuelles 100% certifiées, flexibles et évolutives !</h2>
@@ -1113,7 +1198,7 @@
               </article>
             </div>
           </section>
-          <section class="blue">
+          <section class="blue" style="display:none;">
             <div class="response">
               <article>
                 <h2>Qui finance le Pack Digital à 0€ ?</h2>
@@ -1381,7 +1466,7 @@
               </article>
             </div>
           </section>
-          <section class="hero little">
+          <section class="hero little" style="display:none;">
             <div class="response">
               <article>
                 <h5> <span>Ce qu'ils en  </span><span class="region">pensent</span><span>...</span></h5>
@@ -1638,8 +1723,8 @@
       <script src="_include/assets/js/library/jquery.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
       <script src="_include/assets/js/app.js"></script>
-      <script src="_include/assets/js/mapbox.js"></script>
       <script src="_include/assets/js/form.js"></script>
     </div>
   </body>
